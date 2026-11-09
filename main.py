@@ -72,7 +72,8 @@ def get_sector_keyboard():
 def get_admin_keyboard():
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="👥 Управление модераторами", callback_data="admin_mods")],
-        [InlineKeyboardButton(text="📝 Изменить стандартное сообщение", callback_data="admin_msg")]
+        [InlineKeyboardButton(text="📝 Изменить стандартное сообщение", callback_data="admin_msg")],
+        [InlineKeyboardButton(text="📊 Открыть таблицу с ответами", url="https://docs.google.com/spreadsheets/d/1pu7wnL71NG9Eyazeqz-klqcJ_4Sb40k4lMLIUd4-WUc/edit?usp=sharing")]
     ])
 
 # --- ПОЛЬЗОВАТЕЛЬСКИЙ РЕЖИМ ---
