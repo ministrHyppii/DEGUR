@@ -25,7 +25,7 @@ ADMIN_USERNAME = "ARTISTirbis"
 SETTINGS_FILE = "settings.json"
 
 # СЮДА ВСТАВЬТЕ ССЫЛКУ НА ВАШУ GOOGLE ФОРМУ
-GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSc1St-kQS_oxuWcRC-OPpfx8SMVWYBoSekThNNr7YPdq7eJ7w/viewform"
+GOOGLE_FORM_URL = "https://docs.google.com/spreadsheets/d/1pu7wnL71NG9Eyazeqz-klqcJ_4Sb40k4lMLIUd4-WUc/edit?usp=sharing"
 # СЮДА ВСТАВЬТЕ ССЫЛКУ НА ВАШ ХОСТИНГ С ФАЙЛОМ index.html (Mini App)
 MINI_APP_URL = "https://ваш-сайт.com/index.html"
 
