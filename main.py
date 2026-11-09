@@ -110,8 +110,17 @@ async def process_floor(callback: CallbackQuery, state: FSMContext):
     floor = callback.data.split("_")[1]
     await state.update_data(floor=floor)
     await state.set_state(FormStates.waiting_for_sector)
-    await callback.message.edit_text(f"Выбран {floor} этаж.\nТеперь напишите сектор (или нажмите 'Пропустить'):", 
-                                     reply_markup=get_sector_keyboard())
+    
+    # 1. Убираем кнопки этажей из старого сообщения
+    await callback.message.edit_reply_markup(reply_markup=None)
+    
+    # 2. Отправляем новое сообщение и показываем нижнюю клавиатуру
+    await callback.message.answer(
+        f"Выбран {floor} этаж.\nТеперь напишите сектор (или нажмите 'Пропустить'):", 
+        reply_markup=get_sector_keyboard()
+    )
+    
+    # 3. Обязательно отвечаем Telegram, чтобы кнопка перестала грузиться
     await callback.answer()
 
 @router.message(FormStates.waiting_for_sector)
